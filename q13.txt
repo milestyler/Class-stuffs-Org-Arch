@@ -1,0 +1,25 @@
+global _start
+
+section.text
+SumProc:
+add eax, ebx
+inc ebx
+ret ;
+_start:
+mov ecx, 0xA
+mov eax, 0x0
+mov ebx, 0x1
+PrintSum:
+push ecx
+call SumProc
+pop ecx
+loop PrintSum
+
+mov [total], eax
+
+mov eax, 0x1
+mov ebx, [total]
+int 0x80
+
+section .data
+total: dd 0x00
