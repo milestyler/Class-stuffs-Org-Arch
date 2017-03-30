@@ -4,8 +4,8 @@ _start:
  starter:
     xor eax, eax
     xor ebx, ebx
-    xor edx, edx
     xor ecx, ecx
+    xor edx, edx
     mov al, 0x4
     mov bl, 0x1
     pop ecx
