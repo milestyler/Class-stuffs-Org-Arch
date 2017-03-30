@@ -17,6 +17,5 @@ _start:
     int 0x80
  ender:
     call starter
- message:
-    db 'Tyler Miles'
- slength equ $-message
+ message: db "Tyler Miles"
+  slength equ $-message
